@@ -5,9 +5,6 @@ class BooksController < ApplicationController
   
   def show
   end
-
-  def new #userページにも常に表示されている。ネストする？(親子関係)
-  end
   
   def create
   end
