@@ -11,11 +11,11 @@
   		    <tbody>
   		      <tr>
               <td>
-                <%=link_to attachment_image_tag(@user, :profile_image, :fill, 40, 40, format: "jpeg", fallback: "no_image.jpg"), user_path(@user.id) %><br>
-                <%= @user.name %>
+                <%= link_to attachment_image_tag(@user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size:"40x40"), user_path(@user.id) %><br>
+                <%= link_to @user.name, user_path(@user.id) %>
               </td>
               <td>
-                <%= link_to @book.title, book_path(@user.id) %>
+                <%= link_to @book.title, book_path %> <!-- book_pathの後にid指定いらない -->
               </td>
               <td>
                 <%= @book.body %>
