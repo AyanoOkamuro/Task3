@@ -20,7 +20,7 @@
             <tbody>
               <tr>
                 <td>
-                  <%=link_to attachment_image_tag(@user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "40x40"), user_path(book.user_id) %>
+                  <%=link_to attachment_image_tag(book.user, :profile_image, format: "jpeg", fallback: "no_image.jpg", size: "40x40"), user_path(book.user_id) %>
                 </td>
                 <td>
                   <%= link_to book.title, book_path(book.id) %>
