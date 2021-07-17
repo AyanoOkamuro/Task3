@@ -49,6 +49,7 @@
         </div>
       </div>
     </nav>
+    <%= render "layouts/notifications" %>
     <%= yield %>
       <% if user_signed_in? %>
       <% else %>
